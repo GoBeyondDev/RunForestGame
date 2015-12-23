@@ -5,7 +5,7 @@ const DEBUG_MODE = false;
 //-------- GLOBAL VARIABLES ------------
 var g_playerScore = 0;
 var g_topScore = 0;
-var GRAVITY = 98; //(m/s^2)
+var GRAVITY = 150; //(m/s^2)
 var g_gameOver = false;
 var g_pauseGame = true;
 var g_firstRender = true;
@@ -379,6 +379,5 @@ window.addEventListener("load", function()
 {
 	// imgBg = new Image();
 	// imgBg.src = "data/img/mid_background3.jpg";
-
 	main_init();
 });

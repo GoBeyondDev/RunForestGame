@@ -1,7 +1,7 @@
 ObstacleManager.prototype = new Object();
 ObstacleManager.prototype.constructor = ObstacleManager;
 
-const OBSTACLE_MAX = 4;
+const OBSTACLE_MAX = 3;
 
 function ObstacleManager() {
 	

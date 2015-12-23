@@ -59,6 +59,7 @@ function Button() {
 		switch(this.m_currentSprite.m_id) {
 			case BT_PAUSE:
 				g_app.togglePause();
+				SendLeaderboard("playerTest", g_playerScore, "countryTest");
 				break;
 			case BT_MENU:
 				break;
@@ -66,4 +67,34 @@ function Button() {
 				break;
 		}
 	}
+    
+    function SendLeaderboard(username, playerScore, country)
+    {
+    	var leaderboard_url_param = 'username='+username+'&score='+playerScore+'&country='+country;
+
+        var request = new XMLHttpRequest();
+        
+        request.open("POST", "php/leaderboard_upd.php", true);
+        request.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+        
+        request.timeout = 10000;
+        request.ontimeout = function () {
+            console.log("LEADERBOARD SEND TIMEOUT");
+        };
+
+        request.onload = function() 
+        {
+            if(request.response)
+            {
+                 console.log("LEADERBOARD SENT: "+request.response);
+            }
+        };
+
+        request.onerror = function(e) 
+        {
+			console.log("LEADERBOARD SEND ERROR: "+e);
+        };
+        
+        request.send(leaderboard_url_param);
+    }
 }

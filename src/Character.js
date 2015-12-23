@@ -5,7 +5,7 @@ Character.prototype.constructor = Character;
 function Character() {
 	
 	var timeElapsed = 0;
-	var jumpVo = -150.0;
+	var jumpVo = -200.0;
 	var jumpYo = 0;
 	var initial_X = 0;
 	var initial_Y = 0;
@@ -185,8 +185,9 @@ function Character() {
 			case MOUSE_DOWN:
 			break;
 			case MOUSE_UP:
-				//Limit the jump control to 3/4 of the screen because of the buttons
-				if(m_current_x < 3.0 * m_canvas.getAttribute('width')/4.0) {
+				//Limit the jump control on the screen (x,y) because of the buttons
+				if((m_current_x < 5.0 * m_canvas.getAttribute('width')/6.0) ||
+				   (m_current_y > m_canvas.getAttribute('height')/6.0)) {
 					this.m_currentState = this.CHARACTER_STATES.JUMP;
 				}
 			break;

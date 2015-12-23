@@ -6,7 +6,7 @@
 
 OK! + Optimize game (FPS, sound, etc.) to make it work in smartphones (at least Android)
 + Add menu with different sections: Settings, About, Languages, etc.
-+ Possibility to change player's speed (run faster, slow down)
+OK! + Possibility to change player's speed (run faster, slow down)
 + Add different obstacles (from above)
 + Add platforms where the player can jump
 + Booster to jump higher
