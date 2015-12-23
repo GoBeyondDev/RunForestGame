@@ -366,7 +366,7 @@ function main_loop()
 			g_app.restart();
 		}
 	}
-	else if(m_keyEvent == KEY_SPACE || (g_pauseGame && m_mouseEvent == MOUSE_DOWN)) {
+	else if(m_keyEvent == KEY_SPACE || (g_pauseGame && m_mouseEvent == MOUSE_UP)) {
 		g_app.togglePause();
 	}
 	

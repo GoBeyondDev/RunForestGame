@@ -182,9 +182,9 @@ function Character() {
 
 		switch(m_mouseEvent)
 		{		
-			case MOUSE_UP:
-			break;
 			case MOUSE_DOWN:
+			break;
+			case MOUSE_UP:
 				//Limit the jump control to 3/4 of the screen because of the buttons
 				if(m_current_x < 3.0 * m_canvas.getAttribute('width')/4.0) {
 					this.m_currentState = this.CHARACTER_STATES.JUMP;

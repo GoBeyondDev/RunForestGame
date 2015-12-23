@@ -28,7 +28,7 @@ function Button() {
 
 	this.update = function(dt) {
 
-		if(m_mouseEvent == MOUSE_DOWN)
+		if(m_mouseEvent == MOUSE_UP)
 		{
 			if(this.isTouch(m_current_x, m_current_y)) {
 				this.m_selected = true;
