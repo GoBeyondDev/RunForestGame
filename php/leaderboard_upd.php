@@ -18,7 +18,7 @@ else $error = "LEADERBOARD ERROR: NO SCORE";
 
 if(isset($_POST['country']) == TRUE)
 {
-	$post_score = $_POST['country'];
+	$post_country = $_POST['country'];
 }
 else $error = "LEADERBOARD ERROR: NO COUNTRY";
 
