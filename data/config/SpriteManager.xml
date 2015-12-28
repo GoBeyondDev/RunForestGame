@@ -121,6 +121,18 @@ POSSIBLE object id's:
 	<bounce_loop>false</bounce_loop>
 	<speed>0</speed>
   </sprite>
+  <sprite>
+    <id>BT_LEADERBOARD</id>
+    <img_src>data/img/leaderboard2.png</img_src>
+	<width>128</width>
+	<height>128</height>
+	<frame_index>0</frame_index>
+	<num_frames>1</num_frames>
+	<ticks_per_frame>10</ticks_per_frame>
+	<loop>false</loop>
+	<bounce_loop>false</bounce_loop>
+	<speed>0</speed>
+  </sprite>
   <!--
   <sprite>
     <id>CHARACTER_WALK</id>

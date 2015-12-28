@@ -72,5 +72,14 @@ POSSIBLE object id's:
 			<sprite_id>BT_PAUSE</sprite_id>
 		</sprite_list>
 	</object>
+	<object>
+		<id>BUTTON</id>
+		<type>RECT</type>
+		<position>800,64,128,128</position>
+		<velocity>0</velocity>
+		<sprite_list>
+			<sprite_id>BT_LEADERBOARD</sprite_id>
+		</sprite_list>
+	</object>
 </object_list>
 </scene>

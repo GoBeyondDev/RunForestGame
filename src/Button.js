@@ -4,8 +4,9 @@ Button.prototype.constructor = Button;
 function Button() {
 	const BT_PAUSE 	= "BT_PAUSE";
 	const BT_MENU 	= "BT_MENU";
+	const BT_LEADERBOARD = "BT_LEADERBOARD";
 
-	this.SPRITE_IDS=[BT_PAUSE, BT_MENU];
+	this.SPRITE_IDS=[BT_PAUSE, BT_MENU, BT_LEADERBOARD];
 					
 	this.m_spriteMap=[];
 
@@ -32,9 +33,9 @@ function Button() {
 		{
 			if(this.isTouch(m_current_x, m_current_y)) {
 				this.m_selected = true;
+				//Event is consumed, reset it to ZERO
+				m_mouseEvent = 0;
 			}
-			//Event is consumed, reset it to ZERO
-			m_mouseEvent = 0;
 		}
 
 		if(this.m_selected) {
@@ -59,9 +60,11 @@ function Button() {
 		switch(this.m_currentSprite.m_id) {
 			case BT_PAUSE:
 				g_app.togglePause();
-				SendLeaderboard("playerTest", g_playerScore, "countryTest");
 				break;
 			case BT_MENU:
+				break;
+			case BT_LEADERBOARD:
+				console.log("Leaderboard button clicked!");
 				break;
 			default:
 				break;

@@ -53,7 +53,7 @@ if ($result->num_rows > 0) {
     if($post_score > $user_top_score) {
     	//update player's score
     	///////////////////////////////////////////
-		//=> INSERT INTO THE DATABASE
+		//=> UPDATE THE DATABASE
 		///////////////////////////////////////////
 		$sql = "UPDATE TB_LEADERBOARD " .
 				"SET score=" . $post_score . ", country='" . $post_country . "' " .
